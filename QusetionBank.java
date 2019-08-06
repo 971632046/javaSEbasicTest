@@ -1,7 +1,8 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class QusetionBank{
 	public static void main(String[] args){
-		// 课后作业1
+		/*// 课后作业1
 		int a =0;
 		int b = 1;
 		a = a+b;
@@ -10,9 +11,9 @@ public class QusetionBank{
 		System.out.println(a+" "+b);
 		
 	    // 课后作业2
-		System.out.println("请输入你要输入的值");
+		System.out.println("请输入你要输入的值");*/
 	    Scanner scanner = new Scanner(System.in);
-        int x = scanner.nextInt();
+        /*int x = scanner.nextInt();
         int y = x%10+x/10%10+x/100;
         System.out.println(y);
 		// 3.1
@@ -277,8 +278,105 @@ public class QusetionBank{
 			a7 = a7*a6;
 			a6++;
 		}
-		System.out.println("阶乘为"+a7);
+		System.out.println("阶乘为"+a7);*/
 		// 3课后作业16
+		int n=201,i;
+        outer:
+        for(;;n++){
+            for(i=2;i*i<=n;i++) if(n%i==0)continue outer;
+            break;
+        }
+        System.out.println(n);
+		// 3课后作业17
+		System.out.println("请输入你想要输入的数");
+		int a8 = scanner.nextInt();
+		int i1 =a8/1000;
+	    int j1 =a8%1000/100; 
+	    int k1 =a8%100/10;
+        int	u1= a8%10;
+		System.out.println(u1+""+k1+""+j1+""+i1);
+		// 4课后作业1
+		int[] num4 = {10,20,30,40,50};
+		System.out.println(Arrays.toString(num4));
+		// 4课后作业2
+		char[] nuedu = {'n','e','u','s','o','f','t','e','d','u','c','a','t','i','o','n'};
+	    char[] nuedu1 = Arrays.copyOf(nuedu,nuedu.length);
+		System.out.println(Arrays.toString(nuedu1));
+		// 4课后作业3
+		int[] num5 = {1,6,3,2,4,5,7,8};
+	    Arrays.sort(num5);
+		/*for (int element : num5){
+			System.out.print(element+" ");
+		}*/
+		for (int i2 = 0; i2 < num5.length; i2++){
+			for(int j2=0; j2 < num5.length-i2-1; j2++){
+				if(num5[j2]>num5[j2+1]){
+					int temp = num5[j2];
+					num5[j2]  =num5[j2+1];
+					num5[j2+1] = temp;
+				}
+			}
+		}
+		System.out.print(Arrays.toString(num5));
+		
+		
+		// 4课后作业4
+		int[][] arr1;
+		arr1 = new int [][]{{2,3,4},{4,6,8}};
+		int[][] arr2;
+		arr2 = new int[][]{{1,5,2,8},{5,9,10,-3},{2,7,-5,-18}};
+		int i4 =0;
+		int j = 0;
+		int k = 0;
+		int sum = 0;
+		for(i4=-0; i<arr1.length;i++){
+			for (j =0;j<arr2[0].length;j++){
+				for (k =0;k<arr2[0].length;k++){
+					sum = sum +arr1[i][k]*arr2[k][j];
+			}
+		}
+		}
+		// 4课后作业5
+		double[][] arr3;
+        arr3 = new double[5][4];
+        for(int i5 =0;i<arr1.length;i5++){
+            for(int j3 = 0;j3<arr1[i].length;j3++){
+                arr1[i5][j3] = (int)(Math.random()*10);//随机产生数组元素
+                System.out.print(arr1[i5][j3]+" ");
+            }
+            System.out.println("\n");
+        }
+		// 4课后作业6
+		int[] a = {18,25,7,36,13,2,89,63}; 
+		int max = a[0]; 
+		int maxIndex = 0;
+		for(int i3=1;i3<a.length;i3++){
+				if(max<=a[i3]){
+					max = a[i3]; 
+					maxIndex = i3;
+					}
+		}
+		System.out.println("最大值为："+max+"最大值下标为："+maxIndex);
+		// 4课后作业7
+		
+	    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }
